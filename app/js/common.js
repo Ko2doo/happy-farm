@@ -27,17 +27,6 @@ $(document).ready(function(){
     e.preventDefault();
   });
 
-  // переназначаем переключатели для owl-carousel
-  var owl=$("#owl-slider");
-    owl.owlCarousel();
-    //$(".next") - находим нашу кнопку
-    $(".next").click(function(){
-      owl.trigger("next.owl.carousel");
-    });
-    $(".prev").click(function(){
-      owl.trigger("prev.owl.carousel");
-    });
-
 });
   
 });//end

@@ -37,10 +37,21 @@ gulp.task('browser-sync', function() {
 gulp.task('scripts', function() {
   return gulp.src([
     'app/libs/jquery/jquery.js',
+    'node_modules/bootstrap/dist/js/bootstrap.min.js',
+    'node_modules/tether/dist/js/tether.min.js'
     ])
     .pipe(concat('libs.min.js'))
     .pipe(uglify())
     .pipe(gulp.dest('app/js'))
+});
+
+gulp.task('bootstrap', function(){
+  return gulp.src(['node_modules/bootstrap/scss/bootstrap.scss'])
+    .pipe(sass())
+    .pipe(cssnano())
+    .pipe(rename({suffix: '.min'}))
+    .pipe(gulp.dest('app/css'))
+    .pipe(browserSync.stream());
 });
 
 gulp.task('code', function() {
@@ -105,5 +116,5 @@ gulp.task('watch', function() {
   gulp.watch(['app/js/common.js', 'app/libs/**/*.js'], gulp.parallel('scripts'));
 });
 
-gulp.task('default', gulp.parallel('sass', 'scripts', 'browser-sync', 'watch'));
+gulp.task('default', gulp.parallel('sass', 'bootstrap', 'scripts', 'browser-sync', 'watch'));
 gulp.task('build', gulp.parallel('clear', 'clean', 'css-libs', 'prebuild', 'img'));

@@ -4,6 +4,7 @@
   "description": "Фронтенд окружение",
   "main": "index.html",
   "devDependencies": {
+    "bootstrap": "^4.0.0-alpha.4",
     "browser-sync": "^2.26.7",
     "del": "^4.1.0",
     "gulp": "^4.0.0",
@@ -18,5 +19,6 @@
     "gulp-uglifyjs": "^0.6.2"
   },
   "author": "ko2doo@github.com",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {}
 }

@@ -1,0 +1,41 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul,
+li,
+a,
+span {
+  padding: 0;
+  margin: 0;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@font-face {
+  font-family: 'Oxygen', sans-serif;
+  src: url("../../fonts/oxygen/Oxygen-Regular.ttf");
+}
+
+@font-face {
+  font-family: 'Raleway', sans-serif;
+  src: url("../../fonts/raleway/Raleway-Regular.ttf");
+}
+
+@font-face {
+  font-family: 'Kaushan Script', cursive;
+  src: url("../../fonts/kaushan_script/KaushanScript-Regular.ttf");
+}
