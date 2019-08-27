@@ -11,35 +11,25 @@
 //  в скобках пишем значение, первая переменная с азванием шрифта(т.е. font-family)
 //  Второе значение его вес т.е. font-weight
 // <-----
+$ovo-regular: 'Ovo', serif;
+$muli-regular: 'Muli', sans-serif;
 
-@mixin ff-oxygen{
+@mixin ff-ovo-regular{
   @font-face{
-    font-family: 'Oxygen', sans-serif;
-    src: url("../../fonts/oxygen/Oxygen-Regular.ttf");
+    font-family: $ovo-regular;
+    src: url("../../fonts/Ovo-Regular.ttf");
   }
 }
 
-@mixin ff-raleway{
+@mixin ff-muli{
   @font-face{
-    font-family: 'Raleway', sans-serif;
-    src: url("../../fonts/raleway/Raleway-Regular.ttf");
+    font-family: $muli-regular;
+    src: url("../../fonts/Muli-Regular.ttf");
   }
 }
 
-@mixin ff-kush-script{
-  @font-face{
-    font-family: 'Kaushan Script', cursive;
-    src: url("../../fonts/kaushan_script/KaushanScript-Regular.ttf");
-  }
-}
-
-@include ff-oxygen;
-@include ff-raleway;
-@include ff-kush-script;
-
-$oxy: 'Oxygen', sans-serif;
-$ral: 'Raleway', sans-serif;
-$kaush: 'Kaushan Script', cursive;
+@include ff-ovo-regular;
+@include ff-muli;
 
 @mixin font ($ff, $fw) {
   font-family: $ff;

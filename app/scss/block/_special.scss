@@ -1,0 +1,14 @@
+.section__special{
+	margin-bottom: 177px;
+
+	&-background{
+		height: 700px;
+		background: url('../img/special-left.jpg') no-repeat;
+		background-position: left;
+    background-size: contain;
+	}
+
+	.con-season__mode{
+		margin: 72px 0 0 auto;
+	}
+}

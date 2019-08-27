@@ -1,1 +1,112 @@
 // компоненты
+
+// карточка распрадажа меда
+.season__sale{
+	position: relative;
+	width: 100%;
+	padding: 70px 65px;
+	overflow: hidden;
+	z-index: 10;
+	background: $ghost-green;
+
+	&::before{
+		content: '';
+		position: absolute;
+		bottom: -24px;
+		left: -23px;
+		z-index: -1;
+		display: inline-block;
+		width: 227px;
+		height: 238px;
+		background: url('../img/item-icon/honey.png') no-repeat;
+	}
+
+		&--title{
+			@include font($muli-regular, 600);
+			font-size: 49px;
+			color: $black;
+		}
+
+		&--ceo{
+			margin: 28px 0 28px;
+			@include font($muli-regular, 200);
+			font-size: 25px;
+			color: $text-color;
+		}
+
+		&-button{
+			display: block;
+			margin: 0 auto;
+			border-radius: 0;
+			padding: 22px 34px;
+			text-transform: uppercase;
+			font-size: 31px;
+			border: 1px solid transparent;
+			background: $dark-blood;
+			color: $milk-white;
+			@include ease($easeInOut-3s, color, background, border);
+
+				&:hover{
+					border: 1px solid $dark-blood;
+					background: transparent;
+					color: $light-black;
+					@include ease($ease-2s, color, background, border);
+				}
+		}
+}
+
+// карточки продукции компании
+.card__item{
+	position: relative;
+	height: 495px;
+	overflow: hidden;
+	padding: 8px 12px 25px 12px;
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+	
+	&-veg{
+		background: $light-green;
+
+		&--images{
+			width: 392px;
+			height: auto;
+			display: inline-block;
+			position: absolute;
+			top: -70px;
+			left: 30px;
+		}
+	}
+
+	&-fruit{
+		background: $ligth-orange;
+
+		&--images{
+			width: 307px;
+			height: auto;
+			display: inline-block;
+			position: absolute;
+			top: 0;
+			left: -25px;
+		}
+	}
+
+	&-meat{
+		background: $blood;
+
+		&--images{
+			width: 331px;
+			height: auto;
+			display: inline-block;
+			position: absolute;
+			top: -55px;
+			left: 95px;
+		}
+	}
+
+	&--link{
+		@include font($ovo-regular, 400);
+		font-size: 60px;
+		color: $light-black;
+	}
+}

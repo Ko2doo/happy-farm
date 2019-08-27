@@ -46,7 +46,7 @@ gulp.task('scripts', function() {
 });
 
 gulp.task('bootstrap', function(){
-  return gulp.src(['node_modules/bootstrap/scss/bootstrap.scss'])
+  return gulp.src(['node_modules/bootstrap/scss/bootstrap-flex.scss'])
     .pipe(sass())
     .pipe(cssnano())
     .pipe(rename({suffix: '.min'}))

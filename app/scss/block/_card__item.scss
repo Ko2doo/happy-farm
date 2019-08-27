@@ -1,0 +1,28 @@
+.section__card{
+	width: 100%;
+	padding: 0 0 105px;
+
+	.btn-more{
+		@include font($ovo-regular, 200);
+		font-size: 30px;
+		padding: 12px 40px;
+		background: transparent;
+		color: $light-black;
+		border-radius: 0;
+		border: 1px solid $light-black;
+		margin: 0 auto;
+		@include ease($easeInOut-2s, color, border, background);
+
+			&:hover{
+				@include ease($easeIn-2s, color, border, background);
+				border: 1px solid $dark-blood;
+				background: $blood;
+				color: $milk-white;
+			}
+	}
+
+	.col-card__mode{
+		position: relative;
+		top: -97px;
+	}
+}
