@@ -1,0 +1,23 @@
+.section__bestsellers{
+	padding: 95px 0 145px;
+
+	.btn-show__more{
+		display: block;
+		margin: 60px auto 0 auto;
+		padding: 10px 100px;
+		@include font($muli-regular, 200);
+		font-size: 31px;
+		background: transparent;
+		border: 1px solid $light-black;
+		border-radius: 0;
+		color: $light-black;
+		@include ease($easeInOut-1s, border, color, background);
+
+			&:hover{
+				background: $light-green;
+				color: $milk-white;
+				border: 1px solid $color-card;
+				@include ease($easeInOut-1s, border, color, background);
+			}
+	}
+}

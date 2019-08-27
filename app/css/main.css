@@ -35,6 +35,21 @@ a {
   src: url("../../fonts/Muli-Regular.ttf");
 }
 
+.cart-icon {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.cart-icon::before {
+  content: '';
+  width: 38px;
+  height: 30px;
+  display: inline-block;
+  background: url("../img/shopping-cart.png") no-repeat;
+}
+
 .season__sale {
   position: relative;
   width: 100%;
@@ -165,6 +180,169 @@ a {
   font-weight: 400;
   font-size: 60px;
   color: #171717;
+}
+
+.special__offer {
+  position: relative;
+  width: 100%;
+  padding: 72px 95px;
+  overflow: hidden;
+  z-index: 10;
+  background: #f2c078;
+}
+
+.special__offer::before {
+  content: '';
+  position: absolute;
+  bottom: -95px;
+  right: -30px;
+  z-index: -1;
+  display: inline-block;
+  width: 508px;
+  height: 485px;
+  background: url("../img/item-icon/fruit-carz.png") no-repeat;
+}
+
+.special__offer--title, .special__offer--subtitle {
+  font-family: "Muli", sans-serif;
+  font-weight: 600;
+  font-size: 49px;
+  color: #000;
+}
+
+.special__offer--ceo {
+  margin: 40px 0 40px;
+  font-family: "Muli", sans-serif;
+  font-weight: 200;
+  font-size: 25px;
+  color: #373737;
+}
+
+.special__offer-button {
+  display: block;
+  margin: 0 auto;
+  -webkit-border-radius: 0;
+          border-radius: 0;
+  padding: 22px 34px;
+  text-transform: uppercase;
+  font-size: 31px;
+  border: 1px solid transparent;
+  background: #c7141d;
+  color: #f2f2f2;
+  -webkit-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  -webkit-transition-property: color, background, border;
+  -o-transition-property: color, background, border;
+  transition-property: color, background, border;
+}
+
+.special__offer-button:hover {
+  border: 1px solid #c7141d;
+  background: transparent;
+  color: #171717;
+  -webkit-transition: 0.2s ease;
+  -o-transition: 0.2s ease;
+  transition: 0.2s ease;
+  -webkit-transition-property: color, background, border;
+  -o-transition-property: color, background, border;
+  transition-property: color, background, border;
+}
+
+.product__card {
+  width: 100%;
+  -webkit-transition: 0.2s ease;
+  -o-transition: 0.2s ease;
+  transition: 0.2s ease;
+  -webkit-transition-property: -webkit-box-shadow;
+  transition-property: -webkit-box-shadow;
+  -o-transition-property: box-shadow;
+  transition-property: box-shadow;
+  transition-property: box-shadow, -webkit-box-shadow;
+}
+
+.product__card .card__header {
+  position: relative;
+}
+
+.product__card .card__header-images {
+  max-width: 263px;
+  width: 100%;
+  height: 255px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.product__card .card__header .add_card {
+  max-width: 68px;
+  width: 100%;
+  height: 68px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  -webkit-border-radius: 0;
+          border-radius: 0;
+  background: #c7141d;
+}
+
+.product__card .card__body {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  line-height: 1.5em;
+  padding: 32px 26px 65px 26px;
+  background: #fcecc9;
+}
+
+.product__card .card__body .item__name {
+  font-family: "Muli", sans-serif;
+  font-weight: 300;
+  font-size: 31px;
+  color: #171717;
+}
+
+.product__card .card__body .item__cost {
+  margin-top: 18px;
+  font-family: "Muli", sans-serif;
+  font-weight: 200;
+  font-size: 20px;
+  color: #373737;
+}
+
+.product__card:hover .card__body {
+  -webkit-transition: 0.2s ease-in;
+  -o-transition: 0.2s ease-in;
+  transition: 0.2s ease-in;
+  -webkit-transition-property: -webkit-box-shadow;
+  transition-property: -webkit-box-shadow;
+  -o-transition-property: box-shadow;
+  transition-property: box-shadow;
+  transition-property: box-shadow, -webkit-box-shadow;
+  -webkit-box-shadow: 0 6px 8px -5px #f2c078;
+          box-shadow: 0 6px 8px -5px #f2c078;
 }
 
 body,
@@ -350,4 +528,55 @@ html {
 
 .section__special .con-season__mode {
   margin: 72px 0 0 auto;
+}
+
+.section__offer {
+  height: 690px;
+}
+
+.section__offer-background {
+  background: url("../img/special-2.jpg") no-repeat;
+  background-position: top;
+}
+
+.section__offer .con-special__offer {
+  position: relative;
+  top: -100px;
+  margin: 0 auto;
+}
+
+.section__bestsellers {
+  padding: 95px 0 145px;
+}
+
+.section__bestsellers .btn-show__more {
+  display: block;
+  margin: 60px auto 0 auto;
+  padding: 10px 100px;
+  font-family: "Muli", sans-serif;
+  font-weight: 200;
+  font-size: 31px;
+  background: transparent;
+  border: 1px solid #171717;
+  -webkit-border-radius: 0;
+          border-radius: 0;
+  color: #171717;
+  -webkit-transition: 0.1s ease-in-out;
+  -o-transition: 0.1s ease-in-out;
+  transition: 0.1s ease-in-out;
+  -webkit-transition-property: border, color, background;
+  -o-transition-property: border, color, background;
+  transition-property: border, color, background;
+}
+
+.section__bestsellers .btn-show__more:hover {
+  background: #bdd358;
+  color: #f2f2f2;
+  border: 1px solid #fcecc9;
+  -webkit-transition: 0.1s ease-in-out;
+  -o-transition: 0.1s ease-in-out;
+  transition: 0.1s ease-in-out;
+  -webkit-transition-property: border, color, background;
+  -o-transition-property: border, color, background;
+  transition-property: border, color, background;
 }

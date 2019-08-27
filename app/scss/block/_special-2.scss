@@ -1,3 +1,15 @@
-.section__special-2{
+.section__offer{
+	height: 690px;
+
 	
+	&-background{
+		background: url('../img/special-2.jpg') no-repeat;
+		background-position: top;
+	}
+
+	.con-special__offer{
+		position: relative;
+		top: -100px;
+		margin: 0 auto;
+	}
 }
