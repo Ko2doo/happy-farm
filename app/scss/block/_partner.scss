@@ -1,0 +1,25 @@
+.section__partners{
+	padding: 100px 0 100px;
+
+	.partner__content{
+
+		&--title{
+	    margin: 0 0 50px 0;
+	    text-align: center;
+	    font-size: 40px;
+	    color: $light-black;
+		}
+	}
+
+	.partner__list{
+		display: inline-flex;
+		width: 100%;
+
+		&-li{
+			display: inherit;
+			align-items: center;
+			justify-content: center;
+			width: 100%;
+		}
+	}
+}

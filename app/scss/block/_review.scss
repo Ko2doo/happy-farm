@@ -1,0 +1,36 @@
+.section__review{
+	
+	.col-review__mod{
+		margin-bottom: 85px;
+		height: 380px;
+	}
+
+	.review__content{
+
+		&--title{
+			margin: 0 0 50px 0;
+			text-align: center;
+			font-size: 40px;
+			color: $light-black;
+		}
+
+		&--btn{
+			display: block;
+			padding: 10px 100px;
+			margin: 0 auto 0 auto;
+			border: 1px solid $light-black;
+			border-radius: 0;
+			font-size: 31px;
+			@include font($muli-regular, 200);
+			color: $light-black;
+			@include ease($easeInOut-1s, border, color, background);
+
+			&:hover{
+				background: $light-green;
+				color: $milk-white;
+				border: 1px solid $color-card;
+				@include ease($easeIn-2s, border, color, background);
+			}
+		}
+	}
+}

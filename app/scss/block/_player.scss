@@ -1,0 +1,27 @@
+.section__player{
+	
+	.section__iframe{
+		background: url('../img/player/left.png'), url('../img/player/right.png') $blood;
+		background-repeat: no-repeat;
+		background-position: left 100%, right 100%;
+	}
+
+	.player__content{
+		height: 640px;
+
+		&--title{
+			margin: 0 0 45px 0;
+			text-align: center;
+			font-size: 40px;
+			color: $light-black;
+		}
+
+		&--subtitle{
+			display: block;
+			margin: 0 0 62px 0;
+			text-align: center;
+			font-size: 25px;
+			color: $light-black;
+		}
+	}
+}

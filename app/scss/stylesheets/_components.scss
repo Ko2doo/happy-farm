@@ -239,3 +239,161 @@
 		box-shadow: 0 6px 8px -5px rgb(242, 192, 120);
 	}
 }
+
+// карточки отзывов
+.review__card{
+	height: 100%;
+	display: inline-flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 100%;
+	padding: 42px 32px 38px 32px;
+	background: $ghost-green;
+
+	&--ceo{
+		overflow: auto;
+		margin-bottom: 15px;
+		@include font($muli-regular, 200);
+		font-size: 20px;
+		font-style: italic;
+		text-align: left;
+		color: $light-black;
+	}
+
+	&--foot{
+		@include font($muli-regular, 200);
+		font-size: 20px;
+		font-style: italic;
+		text-align: left;
+		color: $light-black;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		
+		.people{
+
+			&-name{
+				text-decoration: underline;
+				color: $light-black;
+			}
+
+			&-position{
+
+			}
+
+			&-avatar{
+				width: 100px;
+				height: 100px;
+				display: inline-block;
+				object-fit: cover;
+				position: absolute;
+				left: 0;
+				bottom: -65px;
+			}
+		}
+	}
+}
+
+//медиа плеер
+.media__player{
+	width: 100%;
+	// height: 640px;
+
+	&:hover .play{
+		visibility: visible;
+	}
+
+		.play{
+			padding: 0;
+			border: 0;
+			cursor: pointer;
+			visibility: hidden;
+			position: absolute;
+			left: 42%;
+			top: 35%;
+			max-width: 166px;
+			width: 100%;
+			height: 166px;
+			display: inline-block;
+			border-radius: 50%;
+			background-color: rgba(0, 0, 0, 0.69);
+				&:hover{
+					background-color: #000;
+				}
+		}
+
+		.play__no__hover{
+			cursor: pointer;
+			position: absolute;
+			left: 33%;
+			top: 45px;
+			display: inline-block;
+			max-width: 77px;
+			width: 100%;
+			height: 78px;
+			visibility: visible;
+			z-index: 10;
+			background: url('../img/player/play.png') no-repeat;
+		}
+
+		&-iframe{
+			position: relative;
+			&::before{
+				content: '';
+				height: 640px;
+				width: 100%;
+				display: block;
+				background-image: url('../../img/player/player-content.jpg');
+				background-repeat: no-repeat;
+			}
+		}
+
+		&-footer{
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding: 0 22px;
+			height: 50px;
+			background: $black;
+
+			.play-mini,
+			.open-window{
+				display: inline-flex;
+				padding: 4px 11px;
+				border: 0;
+				border-radius: 0;
+				background: transparent;
+			}
+
+			.play-mini{
+				
+				.play_icon{
+					display: inline-flex;
+					align-items: center;
+					&::before{
+						content: '';
+						width: 18px;
+						height: 18px;
+						display: inline-block;
+						background: url('../img/player/play-mini.png') no-repeat;
+					}
+				}
+			}
+
+			.open-window{
+
+				.window_icon{
+					display: inline-flex;
+					align-items: center;
+					&::before{
+						content: '';
+						width: 37px;
+						height: 22px;
+						display: inline-block;
+						background: url('../img/player/window.png') no-repeat;
+					}
+				}
+			}
+		}
+}
