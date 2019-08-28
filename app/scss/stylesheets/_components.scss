@@ -341,11 +341,12 @@
 			position: relative;
 			&::before{
 				content: '';
-				height: 640px;
+				height: 450px;
 				width: 100%;
 				display: block;
 				background-image: url('../../img/player/player-content.jpg');
 				background-repeat: no-repeat;
+				background-position: center;
 			}
 		}
 
