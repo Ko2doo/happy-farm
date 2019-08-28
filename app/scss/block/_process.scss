@@ -11,6 +11,10 @@
 		left: 45px;
 	}
 
+	.overlay{
+		display: none;
+	}
+
 	&--img{
 		width: 100%;
 		height: 100%;
@@ -95,5 +99,34 @@
 				margin-bottom: 0;
 			}
 		}
+	}
+
+	@media screen and (max-width: 768px) {
+		.col-img__mod{
+			left: 0;
+			right: 0;
+			flex: 0 0 100%;
+			max-width: 100%;
+		}
+
+		.col-info__mod{
+			flex: 0 0 85%;
+			max-width: 85%;
+			margin: 35px auto 35px auto;
+		}
+
+		&--img{
+			position: relative;
+		}
+
+		.overlay{
+			display: block;
+			position: absolute;
+			top: 0;
+			width: 96%;
+			height: 100%;
+			background: rgba(156, 140, 90, 0.54);
+		}
+
 	}
 }

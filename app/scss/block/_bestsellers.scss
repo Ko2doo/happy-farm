@@ -20,4 +20,31 @@
 				@include ease($easeInOut-1s, border, color, background);
 			}
 	}
+
+	@media screen and (max-width: 768px) {
+		.row__mobile{
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+		.mobile__col{
+			flex: 0 0 45%;
+			max-width: 45%;
+			margin-bottom: 30px;
+		}
+
+		.product__card{
+
+			.card__header{
+
+				&-images{
+					max-width: 100%;
+				}
+			}
+		}
+
+		.btn-show__more{
+			margin-top: 30px;
+		}
+	}
 }

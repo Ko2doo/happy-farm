@@ -11,4 +11,16 @@
 	.con-season__mode{
 		margin: 72px 0 0 auto;
 	}
+
+	@media screen and (max-width: 768px) {
+		.con-season__mode{
+			margin: 40px auto;
+			flex: 0 0 70%;
+			max-width: 70%;
+		}
+
+		.season__sale{
+			padding: 45px 35px;
+		}
+	}
 }

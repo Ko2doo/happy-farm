@@ -49,4 +49,12 @@ html{
 			background: $farm-name;
 		}
 	}
+
+	@media screen and (max-width: 768px) {
+		&__navbar{
+			.navbar-brand{
+				left: 38%;
+			}
+		}
+	}
 }

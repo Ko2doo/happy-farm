@@ -25,4 +25,15 @@
 		position: relative;
 		top: -97px;
 	}
+
+	@media screen and (max-width: 768px) {
+		.col-card__mode{
+			padding-right: 8px;
+			padding-left: 8px;
+		}
+
+		.card__item--link{
+			font-size: 2em;
+		}
+	}
 }

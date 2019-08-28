@@ -22,4 +22,19 @@
 			width: 100%;
 		}
 	}
+
+	@media screen and (max-width: 768px) {
+		padding-bottom: 70px;
+		.partner__list{
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+
+			&-li{
+				flex: 0 0 30%;
+				max-width: 30%;
+				margin-bottom: 30px;
+			}
+		}
+	}
 }
