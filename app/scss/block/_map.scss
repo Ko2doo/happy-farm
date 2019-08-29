@@ -98,4 +98,30 @@
 			margin: 0 auto;
 		}
 	}
+
+	@media screen and (max-width: 425px){
+		padding: 35px 0 85px;
+		margin-bottom: 20px;
+
+			.map-adress{
+				max-width: 100%;
+				padding: 32px 22px 40px 22px;
+			}
+	}
+
+	@media screen and (max-width: 375px){
+		.map-adress{
+			max-width: 100%;
+			padding: 32px 22px 40px 22px;
+
+				&__lists{
+					display: flex;
+					flex-direction: column;
+				}
+
+				&__li{
+					font-size: 14px;
+				}
+		}
+	}
 }

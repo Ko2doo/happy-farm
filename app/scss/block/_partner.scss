@@ -37,4 +37,51 @@
 			}
 		}
 	}
+
+	@media screen and (max-width: 425px) {
+		padding-bottom: 45px;
+		.partner__list{
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+
+			&-li{
+				flex: 0 0 50%;
+				max-width: 50%;
+				margin-bottom: 30px;
+			}
+		}
+	}
+
+	@media screen and (max-width: 375px) {
+		padding-bottom: 30px;
+		.partner__list{
+
+			&-li{
+				margin-bottom: 40px;
+			}
+		}
+	}
+
+	@media screen and (max-width: 320px) {
+		padding-bottom: 30px;
+		.partner__list{
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+
+			&-li{
+				flex: 0 0 90%;
+				max-width: 90%;
+				margin-bottom: 40px;
+			}
+		}
+
+		.partner__content{
+
+			&--title{
+				margin: 0 0 60px 0;
+			}
+		}
+	}
 }

@@ -68,4 +68,16 @@ html{
 		}
 	}
 
+	@media screen and (max-width: 425px){
+		&__navbar{
+			.navbar-brand{
+				top: 52px;
+				left: 38%;
+				max-width: 25%;
+				height: auto;
+				background: transparent;
+			}
+		}
+	}
+
 }
