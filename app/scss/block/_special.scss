@@ -23,4 +23,31 @@
 			padding: 45px 35px;
 		}
 	}
+
+	@media screen and (max-width: 600px){
+		.season__sale{
+			padding: 25px 18px;
+
+			&::before{
+				width: 120px;
+				height: 126px;
+				bottom: -34px;
+				left: -10px;
+				background: url('../img/item-icon/honey-mini.png') no-repeat;
+			}
+
+				&--title{
+					font-size: 30px;
+				}
+
+				&--ceo{
+					font-size: 18px;
+				}
+
+				&-button{
+					padding: 15px 22px;
+					font-size: 20px;
+				}
+		}
+	}
 }

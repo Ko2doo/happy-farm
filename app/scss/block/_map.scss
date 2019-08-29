@@ -80,4 +80,22 @@
 			}
 		}
 	}
+
+	@media screen and (max-width: 768px) {
+		&--title{
+			display: none;
+		}
+
+		&--iframe{
+			background: transparent;
+			height: auto;
+			.map-tag{
+				display: none;
+			}
+		}
+
+		.map-adress{
+			margin: 0 auto;
+		}
+	}
 }

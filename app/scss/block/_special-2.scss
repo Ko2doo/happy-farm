@@ -18,4 +18,32 @@
 			padding: 45px 35px;
 		}
 	}
+
+	@media screen and (max-width: 600px){
+		.special__offer{
+			padding: 25px 18px;
+
+			&::before{
+				width: 225px;
+				height: 215px;
+				bottom: -34px;
+				right: -10px;
+				background: url('../img/item-icon/fruit-carz-mini.png') no-repeat;
+			}
+				
+				&--title,
+				&--subtitle{
+					font-size: 30px;
+				}
+
+				&--ceo{
+					font-size: 18px;
+				}
+
+				&-button{
+					padding: 15px 22px;
+					font-size: 20px;
+				}
+		}
+	}
 }

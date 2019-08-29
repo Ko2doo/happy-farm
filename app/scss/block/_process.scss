@@ -129,4 +129,48 @@
 		}
 
 	}
+
+	@media screen and (max-width: 600px){
+		.col-img__mod{
+			left: 0;
+			right: 0;
+			flex: 0 0 100%;
+			max-width: 100%;
+		}
+
+		.col-info__mod{
+			flex: 0 0 85%;
+			max-width: 85%;
+			margin: 35px auto 35px auto;
+		}
+
+		&--img{
+			display: none;
+		}
+
+		.overlay{
+			display: none;
+			position: absolute;
+			top: 0;
+			width: 96%;
+			height: 100%;
+			background: rgba(156, 140, 90, 0.54);
+		}
+
+		.process__info{
+
+			&--info{
+				margin-top: 24px;
+			}
+		}
+
+		.info__list{
+			margin-top: 45px;
+
+			&-li{
+				padding: 12px 0 12px;
+				margin-bottom: 20px;
+			}
+		}
+	}
 }
