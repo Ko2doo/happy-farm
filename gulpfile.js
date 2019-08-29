@@ -60,6 +60,7 @@ gulp.task('code', function() {
 });
 
 // минификация css
+// минификация css
 gulp.task('css-libs', function() {
   return gulp.src([
     'app/css/libs.css',
@@ -117,4 +118,4 @@ gulp.task('watch', function() {
 });
 
 gulp.task('default', gulp.parallel('sass', 'bootstrap', 'scripts', 'browser-sync', 'watch'));
-gulp.task('build', gulp.parallel('clear', 'clean', 'css-libs', 'prebuild', 'img'));
+gulp.task('build', gulp.parallel('clear', 'clean', 'css-libs', 'media-queries', 'prebuild', 'img'));

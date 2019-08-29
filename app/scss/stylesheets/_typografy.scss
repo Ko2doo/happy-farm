@@ -17,14 +17,14 @@ $muli-regular: 'Muli', sans-serif;
 @mixin ff-ovo-regular{
   @font-face{
     font-family: $ovo-regular;
-    src: url("../../fonts/Ovo-Regular.ttf");
+    src: url("../fonts/Ovo-Regular.ttf");
   }
 }
 
 @mixin ff-muli{
   @font-face{
     font-family: $muli-regular;
-    src: url("../../fonts/Muli-Regular.ttf");
+    src: url("../fonts/Muli-Regular.ttf");
   }
 }
 

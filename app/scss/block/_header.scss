@@ -1,6 +1,6 @@
 body,
 html{
-	@include ff-muli;
+	font-family: $muli-regular;
 	background: url('../img/body-bg.jpg') repeat;
 }
 
