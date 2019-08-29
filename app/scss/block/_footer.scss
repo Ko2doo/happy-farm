@@ -1,0 +1,97 @@
+.footer{
+	height: 430px;
+	position: relative;
+	overflow: hidden;
+	// padding: 145px 0 150px;
+	background-color: $milk-white;
+		&::before{
+			content: '';
+			width: 438px;
+			height: 386px;
+			display: inline-block;
+			position: absolute;
+			left: -105px;
+			bottom: -65px;
+			background: url('../img/foot-left.png') no-repeat;
+		}
+
+		&::after{
+			content: '';
+			width: 431px;
+			height: 591px;
+			display: inline-block;
+			position: absolute;
+			right: -36px;
+			bottom: -185px;
+			background: url('../img/foot-right.png') no-repeat;
+		}
+}
+
+.footer__content{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	&--fam,
+	&--farm{
+		@include font($ovo-regular, 600);
+		font-size: 60px;
+		color: $farm-name;
+	}
+
+	&--addr{
+		@include font($muli-regular, 600);
+		text-transform: uppercase;
+		font-size: 25px;
+		color: $light-black;
+	}
+
+	&--location{
+		@include font($muli-regular, 500);
+		font-size: 20px;
+		color: $text-color;
+	}
+
+	&--btn{
+		padding: 22px 0 22px;
+		width: 100%;
+		border-radius: 0;
+		border: 1px solid transparent;
+		text-transform: uppercase;
+		text-decoration: none;
+		font-size: 30px;
+		@include font($muli-regular, 400);
+		color: $milk-white;
+		background: $dark-blood;
+		@include ease($easeInOut-2s, background, color, border);
+		&:hover{
+			border: 1px solid $dark-blood;
+			background: transparent;
+			color: $text-color;
+			@include ease($easeIn-1s, background, color, border);
+		}
+	}
+
+	.footer__mod{
+		width: 100%;
+	}
+
+	.box__name,
+	.box__addr,
+	.box__btn{
+		z-index: 10;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.box__name,
+	.box__addr{
+		flex-direction: column;
+	}
+	
+	.box__addr{
+		align-items: flex-start;
+		justify-content: space-around;
+	}
+}
