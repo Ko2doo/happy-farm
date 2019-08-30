@@ -559,6 +559,11 @@ html {
   background: url("../img/body-bg.jpg") repeat;
 }
 
+.wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
 .header .searching__content {
   display: -webkit-box;
   display: -webkit-flex;

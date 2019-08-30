@@ -1,5 +1,6 @@
 var gulp        = require('gulp'),
   sass          = require('gulp-sass'),
+  addsrc        = require('gulp-add-src'),
   browserSync   = require('browser-sync'),
   gcmq          = require('gulp-group-css-media-queries'),
   concat        = require('gulp-concat'),
@@ -35,14 +36,14 @@ gulp.task('browser-sync', function() {
 
 //Таск для всех сприптов
 gulp.task('scripts', function() {
-  return gulp.src([
-    'app/libs/jquery/jquery.js',
-    'node_modules/bootstrap/dist/js/bootstrap.min.js',
-    'node_modules/tether/dist/js/tether.min.js'
-    ])
+  return gulp.src(['app/libs/jquery/jquery.js'])
+    .pipe(addsrc.append('node_modules/tether/dist/js/tether.js'))
+    .pipe(addsrc.append('node_modules/bootstrap/dist/js/bootstrap.js'))
+    .pipe(addsrc.append('node_modules/owl.carousel/dist/owl.carousel.js'))
+    .pipe(addsrc.append('node_modules/aos/dist/aos.js'))
     .pipe(concat('libs.min.js'))
     .pipe(uglify())
-    .pipe(gulp.dest('app/js'))
+    .pipe(gulp.dest('app/js'));
 });
 
 gulp.task('bootstrap', function(){
@@ -60,17 +61,25 @@ gulp.task('code', function() {
 });
 
 // минификация css
-// минификация css
-gulp.task('css-libs', function() {
+gulp.task('css-min', function() {
   return gulp.src([
-    'app/css/libs.css',
-    'app/css/main.css'
+    'app/css/main.css',
+    'app/css/libs.css'
     ])
     .pipe(cssnano())
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest('build/css'));
 });
 
+gulp.task('libs', function(){
+  return gulp.src([
+      'node_modules/aos/src/sass/aos.scss',
+      'node_modules/owl.carousel/dist/assets/owl.carousel.css'
+    ])
+  .pipe(sass())
+  .pipe(concat('libs.css'))
+  .pipe(gulp.dest('app/css'));
+});
 
 // Группируем медиа-запросы
 gulp.task('media-queries', function (){
@@ -117,5 +126,5 @@ gulp.task('watch', function() {
   gulp.watch(['app/js/common.js', 'app/libs/**/*.js'], gulp.parallel('scripts'));
 });
 
-gulp.task('default', gulp.parallel('sass', 'bootstrap', 'scripts', 'browser-sync', 'watch'));
-gulp.task('build', gulp.parallel('clear', 'clean', 'css-libs', 'media-queries', 'prebuild', 'img'));
+gulp.task('default', gulp.parallel('sass', 'libs', 'bootstrap', 'scripts', 'browser-sync', 'watch'));
+gulp.task('build', gulp.parallel('clear', 'clean', 'css-min', 'media-queries', 'prebuild', 'img'));

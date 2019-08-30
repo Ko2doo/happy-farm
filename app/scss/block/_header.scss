@@ -4,6 +4,12 @@ html{
 	background: url('../img/body-bg.jpg') repeat;
 }
 
+// фикс чтобы работал плагин aos.js
+.wrapper{
+	position: relative;
+	overflow: hidden;
+}
+
 .header{
 	
 	.searching__content{
